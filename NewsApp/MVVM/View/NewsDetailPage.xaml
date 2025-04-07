@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:NewsApp.MVVM.ViewModel"
+             x:DataType="viewmodel:NewsDetailViewModel"
+             x:Class="NewsApp.MVVM.View.NewsDetailPage"
+             Title="NewsDetailPage">
+
+    <VerticalStackLayout Spacing="10"
+                         Margin="10">
+        <Image HeightRequest="250"
+               Aspect="Fill"
+               Source="{Binding News.ImageUrl}"/>
+        <Label Text="{Binding News.Title}"
+          FontSize="Title"
+          TextColor="Blue"/>
+        <Frame>
+            <Label Text="{Binding News.Content}"
+                   Margin="5"
+                   FontSize="Medium"/>
+        </Frame>
+     
+
+    </VerticalStackLayout>
+</ContentPage>
